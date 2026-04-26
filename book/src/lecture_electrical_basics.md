@@ -28,7 +28,67 @@ The simplest gate (aside from the gate that does nothing) is the **NOT** gate, o
 | 0    | 1      |
 | 1    | 0      |
 
-TODO: The rest of the gates
+Most other gates perform logical operations on 2 inputs. For example, we can represent an **AND** gate by the following truth table.
+
+| A | B | A AND B |
+|---|---|---------|
+| 0 | 0 | 0       |
+| 0 | 1 | 0       |
+| 1 | 0 | 0       |
+| 1 | 1 | 1       |
+This outputs a `1` when `A **AND** B` are both 1.
+
+Below are a few of the most common (wording?) logic gates.
+
+**OR** gate:
+| A | B | A OR B |
+|---|---|---------|
+| 0 | 0 | 0       |
+| 0 | 1 | 1       |
+| 1 | 0 | 1       |
+| 1 | 1 | 1       |
+This outputs a `1` when `A **OR** B` are both 1.
+
+**XOR** (eXclusive OR) gate:
+| A | B | A AND B |
+|---|---|---------|
+| 0 | 0 | 0       |
+| 0 | 1 | 1       |
+| 1 | 0 | 1       |
+| 1 | 1 | 0       |
+This outputs a `1` when either A or B are 1, but not both.
+
+You can also add inverters to these gates. We denote these as **NAND**, **NOR**, and **XNOR**.
+
+**NAND** gate:
+| A | B | A AND B |
+|---|---|---------|
+| 0 | 0 | 1       |
+| 0 | 1 | 1       |
+| 1 | 0 | 1       |
+| 1 | 1 | 0       |
+This outputs a `1` when A, B, or both A and B are zero. (wording?) Equivalently, this outputs a 0 when A and B are 1.
+
+**NOR** gate:
+| A | B | A AND B |
+|---|---|---------|
+| 0 | 0 | 1       |
+| 0 | 1 | 0       |
+| 1 | 0 | 0       |
+| 1 | 1 | 0       |
+This outputs a `1` when `A **AND** B` are both 0. Equivalently, this outputs a 0 when A or B are 1.
+
+**XNOR** gate:
+| A | B | A AND B |
+|---|---|---------|
+| 0 | 0 | 1       |
+| 0 | 1 | 0       |
+| 1 | 0 | 0       |
+| 1 | 1 | 1       |
+This outputs a `1` when `A **AND** B` are both 1 or both 0.
+
+Note that you may also see **AND** gates represented as `F = A * B` and **OR** gates represented as `F = A + B`, where F is the output.
+(is this necessary?)
 
 ### Designing Some Logic
 
@@ -156,6 +216,7 @@ Not only does this produce difficult-to-debug issues,
 but many logic gates will heat up and destroy themselves if they receive an input halfway between HIGH and LOW for too long.
 
 In other words: wire's haunted.
+(insert edit of the "moon's haunted" meme here)
 
 ### The Probe
 

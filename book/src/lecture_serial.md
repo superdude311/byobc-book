@@ -2,6 +2,23 @@
 
 [Lecture Slides](https://docs.google.com/presentation/d/1RwEVXXA11jg1CMk1liAJUyXdV_C1u1YjqgMlVv8eloA/edit?usp=sharing)
 
+### Why separate peripherals
+
+why no USB
+
+### intro UART
+
+baud
+
+### the ACIA
+
+crystals n stuff
+
+### how to control the ACIA in software
+
+memory mapping, registers, reading/writing data 
+
+
 ## Assignment
 
 ### Build

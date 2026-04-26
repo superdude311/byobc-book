@@ -5,6 +5,7 @@
 ## Lecture
 
 TODO:
+yeah bro im not doing this one
 
 ## Assignment
 

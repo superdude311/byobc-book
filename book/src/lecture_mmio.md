@@ -4,7 +4,23 @@
 
 ## Lecture
 
-### The W65C22 Versatile Interface Adapter
+### LED
+
+we want a wire to blink an LED
+what could we use? nothing!
+we need more wires
+hence, the VIA
+
+### The VIA 
+how to wire it
+how to use instructions
+reading/writing, registers/ddr, etc
+
+### integrating the VIA
+updating the memory map (should this be here?)
+
+### MMIO/PMIO
+
 
 ## Assignment
 

@@ -27,7 +27,7 @@ so this book will omit the `$` for cases where there is no ambiguity.
 
 ### A Computer
 
-As discussed last time, we defined a computer as a thing that can run programs,
+For this class (and in the L1 lecture slides) we define a computer as a thing that can run programs,
 where the program is simply a list of steps, or **instructions**.
 In our case, the instructions are just a list of bytes.
 
@@ -83,7 +83,7 @@ and only the CPU knows which path is correct.
 
 Thus, the CPU needs to be able to tell the storage what part of the program it wants next.
 This is done with a group of sixteen wires called the **address bus**.
-Unlike the data bus, which can sometimes be bidirectional, the address bus is always driven by the CPU.
+Unlike the data bus, which is bidirectional (i.e. the storage can put values on the data bus OR the CPU can put values on the data bus), the address bus is always driven by the CPU.
 
 For storage devices, the address bus is very similar to an array index.
 The storage device will look at the address bus, and it will place on the data bus whichever byte is at that location/index.
