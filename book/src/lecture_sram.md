@@ -11,10 +11,19 @@ and then move on to discussing how we add memory to our computer.
 ### Decoupling Capacitors
 
 TODO:
+When we reprogram the flash, it uses a high voltage to clear the floating gate.
+
 
 ### Timing Problems
 
-TODO:
+In theory, everything happens on the clock edge, so data only has to be ready *just* as the clock edge arrives.
+However, the real world is not as nice, and logic takes some time to update. 
+So, if the data arrived exactly on the clock edge, the logic wouldn't update in time.
+This is a **Setup Time Violation**. Setup time defines a minimum amount of time where the data should be "ready" before the clock edge.
+This ensures that the data would be stable and properly update the logic *before* the clock edge.
+For similar reasons, we also have to hold the data for a minimum amount of time after the clock edge.
+This is called the hold time, and changing the data too soon after the clock edge is a **Hold Time Violation**.
+If the input changes between the setup/hold window, it might be missed on that clock edge. 
 
 ### The Need for Memory
 
@@ -68,6 +77,7 @@ A single capacitor is either charged (1) or discharged (0).
 A single transistor, when turned on,
 allows that capacitor to release its charge so that we can read the cell,
 and subsequently we can charge the capacitor back up if we'd like.
+// add a read/write DRAM cell GIF
 
 Because DRAM requires so few parts per bit, it is incredibly dense,
 which is why modern computers can have many billions of bytes of RAM available.

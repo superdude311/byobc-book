@@ -4,7 +4,15 @@
 
 ## Lecture
 
+### how do we run the computer without the debugger?
+what does the debugger do? 
+ - reprogram the flash
+ - control reset
+ - generate a clock
+we can reprogram the flash using a microcontroller + level shifters, or by the custom thing that I intend to build sometime soon
+
 TODO: Content
+### reseting the computer
 
 ## Assignment
 
