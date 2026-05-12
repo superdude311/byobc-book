@@ -47,8 +47,71 @@ and this byte is known as the instruction's **opcode**.
 Some instructions might also have one or two additional bytes after the opcode,
 and these additional bytes are known as the **operand**.
 
-### Rest of the Chapter
+Most instructions are more complicated than `NOP`, though.
+Lets learn more about what these instructions are actually doing.
 
+### Registers!
+
+Most instructions change the **registers**, which are small, quickly accessable units of storage inside the CPU.
+All reasonable CPUs have registers. The 6502 is rather rudimentary, and thus only has 3 registers.
+These are the A, X, and Y registers. The A register is the **accumulator**, 
+and the X and Y registers are index registers. Each register holds a 1-byte value.
+
+### Loading from Registers
+
+To load a value into a register, use the `LDA`, `LDX`, and `LDY` instructions.
+There are two main ways to tell the CPU where to load the value from. These are called **addressing modes**.
+The first is **Immediate Addressing Mode**, which loads an "immediate" value. This is denoted with a `#`.
+For example, the operation `LDA #42` will load the value `$42` to the A register.
+The other is **Implicit? Addressing Mode**, which loads the value at that address in memory to the register. This is not denoted by a special character.
+For example, the operation `LDA 1234` will load A with the value which is at the memory address `$1234`.
+
+### Storing to Registers
+
+Often we also want to store values from our registers into memory. 
+This can be accomplished with a few more instructions, namely `STA`, `STX`, and `STY`.
+For example, to store the value held into the A register to memory address `$1234`, we can use `STA $1234`.
+
+### Increment and Decrement
+
+The instructions `INX/DEX`, `INY/DEY`, and `INC A/DEC A`, are used for incrementing and decrementing X, Y, and A respectively.
+
+### Jumps
+
+The `JMP` immediately goes to another instruction, by setting the Program Counter to another memory address.
+For example, if the PC is currently `$8004`, `JMP $8004` will skip the instructions at `$8001-8003`.
+However, we don't like remembering arbitrary addresses, so we use labels for readibility. Labels are denoted as the following
+```
+    JMP some_label  ; will jump to LDX instruction
+    NOP
+    NOP
+some_label:
+    LDX #42
+```
+Jumps can also go forward and backwards, and are helpful for implementing loops. 
+Let's look at the following loop in C before translating it into assembly.
+```C
+int x = 10;
+do {
+    x = x - 1
+} while (true);
+```
+In 6502 assembly, this could be written as
+```
+    LDX #10
+label:
+    DEX
+    JMP label
+```
+However, an infinite loop is not very useful. 
+We'd like to be able jump only on certain conditions, like `x < 10` or `a != 42`.
+We need some kind of conditional jump...
+
+### Conditinal Jumps
+
+
+
+### Doing Math on the Computer
 TODO:
 
 ## Assignment
@@ -59,7 +122,8 @@ Instead, you're going to fill in a program.
 Make sure that you've run one of the `install_windows`, `install_macos`, or `install_linux` scripts,
 as this will install DASM for you.
 
-Open up `starter-code/sum_1_to_N.S`.
+Navigate to the directory where you initially cloned the `byobc` repository, 
+then open up `starter-code/sum_1_to_N.S`.
 This program starts zeroing out the A register
 and loading some number into the X register (in this case, 10).
 
