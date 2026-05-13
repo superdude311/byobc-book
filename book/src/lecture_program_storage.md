@@ -114,7 +114,8 @@ To finally arrive at our ideal stage medium, we have the
 The internal structure is very similar to an EPROM, but with one key difference:
 Instead of needing sunlight to pull the electrons out of the floating gate,
 we use quantum mechanics. 
-As I do not understand quantum mechanics, unfortunately I cannot elaborate further. The concept used to erase EEPROM is known as Fowler-Nordheim tunneling, if you'd like to learn more.
+As I do not understand quantum mechanics, unfortunately I cannot elaborate further. 
+The concept used to erase EEPROM is known as Fowler-Nordheim tunneling, if you'd like to learn more.
 The upside is that both programming and erasing can both be done quickly and electronically,
 making EEPROMs a very useful storage medium indeed.
 

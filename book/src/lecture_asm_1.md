@@ -105,7 +105,7 @@ label:
 ```
 However, an infinite loop is not very useful. 
 We'd like to be able jump only on certain conditions, like `x < 10` or `a != 42`.
-We need some kind of conditional jump...
+We need some kind of... conditional jump
 
 ### Conditinal Jumps
 

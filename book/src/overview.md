@@ -45,16 +45,16 @@ TODO: Materials listing.
 The materials required to complete the computer as if you were in the course (reword) are listed below:
  - CUSTOM DEBUGGER BOARD - how to purchase? 
  - 3 breadboards. We recommend the BB830s from BusBoard Prototype Systems
- - 1 wiring kit. sky pls add link
+ - 1 wiring kit. We get this one (or similar) from Amazon. sky pls add link
  - 1 of each of the following chips:
     - 74HC00 quad NAND gate: link
     - W65C22 VIA: 
     - W65C51N ACIA:
-    - W65C02S microprocessor:
-    - SST39SF010A flash:
-    - AS6C62256 32k SRAM:
+    - W65C02S microprocessor: 
+    - SST39SF010A flash: NOTE THIS CHIP IS GOING OUT OF PRODUCTION
+    - AS6C62256 32k SRAM: 
     - optionally: DS1813 Reset Supervisor - link
- - XX YYohm resistors - i forgored
+ - XX 4.7k resistors - i forgored
  - 1 ZZuF capacitor (decoupling)
  - 1 crystal
  - 1 resistor (crystal)
